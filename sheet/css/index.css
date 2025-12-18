@@ -1,0 +1,57 @@
+html {
+  font-size: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("../media/bg2.jpg");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: 30rem 2rem;
+}
+
+#car {
+  position: absolute;
+  bottom: 0rem;
+  left: 52rem;
+  animation: leftturn 1s ease 1;
+  transition: all 1s ease;
+}
+
+/* @keyframes leftturn {
+  0% {
+    position: absolute;
+    bottom: 0rem;
+    left: 52rem;
+  }
+  50% {
+    position: absolute;
+    bottom: 0rem;
+    left: 30rem;
+  }
+
+  100% {
+    position: absolute;
+    bottom: 0rem;
+    left: 52rem;
+  }
+} */
+
+@keyframes leftturn {
+  from {
+    position: absolute;
+    bottom: 0rem;
+    left: 52rem;
+  }
+
+  to {
+    position: absolute;
+    bottom: 0rem;
+    left: 45rem;
+  }
+}
