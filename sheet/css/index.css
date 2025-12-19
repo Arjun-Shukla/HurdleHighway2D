@@ -1,6 +1,3 @@
-html {
-  font-size: 10px;
-}
 
 * {
   padding: 0;
@@ -12,15 +9,15 @@ body {
   background: url("../media/bg2.jpg");
   background-repeat: no-repeat;
   background-size: 50%;
-  background-position: 30rem 2rem;
+  background-position: 300px 20px;
 }
 
 #car {
   position: absolute;
-  bottom: 0rem;
-  left: 52rem;
-  animation: leftturn 1s ease 1;
-  transition: all 1s ease;
+  bottom: 0px;
+  left: 520px;
+  /* animation: leftturn 1s ease 1;
+  transition: all 1s ease; */
 }
 
 /* @keyframes leftturn {
@@ -42,16 +39,16 @@ body {
   }
 } */
 
-@keyframes leftturn {
+/* @keyframes leftturn {
   from {
     position: absolute;
-    bottom: 0rem;
-    left: 52rem;
+    bottom: 0px;
+    left: 520px;
   }
 
   to {
     position: absolute;
-    bottom: 0rem;
-    left: 45rem;
+    bottom: 0px;
+    left: 450px;
   }
-}
+} */
