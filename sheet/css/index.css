@@ -1,4 +1,3 @@
-
 * {
   padding: 0;
   margin: 0;
@@ -20,35 +19,35 @@ body {
   transition: all 1s ease; */
 }
 
-/* @keyframes leftturn {
-  0% {
-    position: absolute;
-    bottom: 0rem;
-    left: 52rem;
-  }
-  50% {
-    position: absolute;
-    bottom: 0rem;
-    left: 30rem;
-  }
+#obs1 {
+  position: absolute;
+  top: -150px;
+  left: 330px;
 
-  100% {
-    position: absolute;
-    bottom: 0rem;
-    left: 52rem;
-  }
-} */
+  /* transition: all 20s ease; */
+}
 
-/* @keyframes leftturn {
+.animateobs1{
+  animation: updown 3.5s ease-in;
+}
+
+@keyframes updown {
   from {
     position: absolute;
-    bottom: 0px;
-    left: 520px;
+    top: -150px;
+    left: 330px;
   }
+
+  /* 50% {
+    position: absolute;
+    top: 500px;
+    left: 330px;
+  } */
 
   to {
     position: absolute;
-    bottom: 0px;
-    left: 450px;
+    top: 580px;
+    left: 330px;
   }
-} */
+}
+
