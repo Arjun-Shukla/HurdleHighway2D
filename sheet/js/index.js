@@ -38,14 +38,122 @@ console.log(obs1n);
 let obs1nc = window.getComputedStyle(obs1).top;
 console.log(obs1nc);
 
-function obsanimate() {
-  obs1.classList.remove("animateobs1");
+//animation for obs1
+
+function obsanimate(element) {
+  element.classList.remove("animateobs1");
 
   setTimeout(() => {
-    obs1.classList.add("animateobs1");
+    element.classList.add("animateobs1");
   }, 10);
 }
 
-obsanimate();
+obsanimate(obs1);
 
-setInterval(obsanimate, 4000);
+setInterval(() => {
+  obsanimate(obs1);
+}, 5000);
+
+//animation for obs2
+
+let obs2 = document.getElementById("obs2");
+
+function obsanimate2() {
+  obs2.classList.remove("animateobs2");
+
+  setTimeout(() => {
+    obs2.classList.add("animateobs2");
+  }, 2000);
+}
+
+obsanimate2();
+
+setInterval(obsanimate2, 5500);
+
+//animation for obs3
+
+let obs3 = document.getElementById("obs3");
+
+function obsanimate3() {
+  obs3.classList.remove("animateobs3");
+
+  setTimeout(() => {
+    obs3.classList.add("animateobs3");
+  }, 2500);
+}
+
+obsanimate3();
+
+setInterval(obsanimate3, 6500);
+
+//animation for obs4 
+
+let obs4 = document.getElementById("obs4");
+
+function obsanimate4() {
+  obs4.classList.remove("animateobs4");
+
+  setTimeout(() => {
+    obs4.classList.add("animateobs4");
+  }, 4000);
+}
+
+obsanimate4();
+
+setInterval(obsanimate4, 8500);
+
+//animation for obs5
+
+let obs5 = document.getElementById("obs5");
+
+function obsanimate5() {
+  obs5.classList.remove("animateobs5");
+
+  setTimeout(() => {
+    obs5.classList.add("animateobs5");
+  }, 5500);
+}
+
+obsanimate5();
+
+setInterval(obsanimate5, 9500);
+
+//animation for obs7
+
+let obs7 = document.getElementById("obs7");
+
+function obsanimate7() {
+  obs7.classList.remove("animateobs7");
+
+  setTimeout(() => {
+    obs7.classList.add("animateobs7");
+  }, 6500);
+}
+
+obsanimate7();
+
+setInterval(obsanimate7, 10500);
+
+// animation for obs 9
+
+let obs9 = document.getElementById("obs9");
+
+function obsanimate9() {
+  obs7.classList.remove("animateobs9");
+
+  setTimeout(() => {
+    obs7.classList.add("animateobs9");
+  }, 3500);
+}
+
+obsanimate9();
+
+setInterval(obsanimate9, 7500);
+
+
+
+
+
+
+
+

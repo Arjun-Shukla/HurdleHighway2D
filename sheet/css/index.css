@@ -8,7 +8,8 @@ body {
   background: url("../media/bg2.jpg");
   background-repeat: no-repeat;
   background-size: 50%;
-  background-position: 300px 20px;
+  background-position: 300px 15px;
+  overflow:hidden;
 }
 
 #car {
@@ -21,21 +22,21 @@ body {
 
 #obs1 {
   position: absolute;
-  top: -150px;
-  left: 330px;
-
+  top: -200px;
+  left: 340px;
+overflow: hidden;
   /* transition: all 20s ease; */
 }
 
-.animateobs1{
-  animation: updown 3.5s ease-in;
+.animateobs1 {
+  animation: updown 2.5s ease-in;
 }
 
 @keyframes updown {
   from {
     position: absolute;
-    top: -150px;
-    left: 330px;
+    top: -200px;
+    left: 340px;
   }
 
   /* 50% {
@@ -46,8 +47,251 @@ body {
 
   to {
     position: absolute;
-    top: 580px;
-    left: 330px;
+    top: 550px;
+    left: 340px;
   }
 }
 
+#obs2 {
+  transform: rotateX(20deg);
+  position: absolute;
+  top: -200px;
+  right: 390px;
+  overflow: hidden;
+}
+
+.animateobs2 {
+  animation: updown2 2.5s ease-in;
+}
+
+@keyframes updown2 {
+  from {
+    position: absolute;
+    top: -200px;
+    right: 390px;
+  }
+
+  to {
+    position: absolute;
+    top: 550px;
+    right: 390px;
+  }
+}
+
+#obs3 {
+  position: absolute;
+  top: -200px;
+  right: 550px;
+  overflow: hidden;
+}
+
+.animateobs3 {
+  animation: updown3 2.5s ease-in;
+}
+
+@keyframes updown3 {
+  from {
+    position: absolute;
+    top: -200px;
+    right: 550px;
+  }
+
+  to {
+    position: absolute;
+    top: 550px;
+    right: 550px;
+  }
+}
+
+#obs4 {
+  position: absolute;
+  top: -200px;
+  right: 520px;
+overflow: hidden;
+  /* transition: all 20s ease; */
+}
+
+.animateobs4 {
+  animation: updown4 2.5s ease-in;
+}
+
+@keyframes updown4 {
+  from {
+    position: absolute;
+    top: -200px;
+    right: 520px;
+  }
+
+  /* 50% {
+    position: absolute;
+    top: 500px;
+    left: 330px;
+  } */
+
+  to {
+    position: absolute;
+    top: 550px;
+    right: 520px;
+  }
+}
+
+#obs5 {
+  position: absolute;
+  top: -200px;
+  left: 400px;
+overflow: hidden;
+  /* transition: all 20s ease; */
+}
+
+.animateobs5 {
+  animation: updown4 2.5s ease-in;
+}
+
+@keyframes updown5 {
+  from {
+    position: absolute;
+    top: -200px;
+    left: 400px;
+  }
+
+  /* 50% {
+    position: absolute;
+    top: 500px;
+    left: 330px;
+  } */
+
+  to {
+    position: absolute;
+    top: 550px;
+    left: 400px;
+  }
+}
+
+#obs7 {
+  position: absolute;
+  top: -200px;
+  right: 700px;
+overflow: hidden;
+  /* transition: all 20s ease; */
+}
+
+.animateobs7 {
+  animation: updown4 2.5s ease-in;
+}
+
+@keyframes updown7 {
+  from {
+    position: absolute;
+    top: -200px;
+    right: 700px;
+  }
+
+  /* 50% {
+    position: absolute;
+    top: 500px;
+    left: 330px;
+  } */
+
+  to {
+    position: absolute;
+    top: 550px;
+    right: 700px;
+  }
+}
+
+/*infinite animation for traffic lights*/
+
+#obs6 {
+  position: absolute;
+  top: 0px;
+  right: 901px;
+  animation: updown6 2.5s ease-in infinite;
+  transition: all 2.5s ease;
+  overflow: hidden;
+}
+
+/* .animateobs6 {
+  animation: updown6 2.5s ease-in;
+} */
+
+@keyframes updown6 {
+  from {
+  position: absolute;
+  top: -200px;
+  right: 901px;
+  }
+
+  /* 50% {
+    position: absolute;
+    top: 500px;
+    left: 330px;
+  } */
+
+  to {
+  position: absolute;
+  top: 550px;
+  right: 901px;
+  }
+}
+
+/* traffic lights 2 */
+
+#obs8 {
+  position: absolute;
+  top: 0px;
+  right: 290px;
+  animation: updown8 2.5s ease-in infinite;
+  transition: all 2.5s ease;
+  overflow: hidden;
+}
+
+/* .animateobs6 {
+  animation: updown6 2.5s ease-in;
+} */
+
+@keyframes updown8 {
+  from {
+  position: absolute;
+  top: -200px;
+  right: 290px;
+  }
+
+  /* 50% {
+    position: absolute;
+    top: 500px;
+    left: 330px;
+  } */
+
+  to {
+  position: absolute;
+  top: 550px;
+  right: 290px;
+  }
+}
+
+/* crash car */
+
+#obs9 {
+  position: absolute;
+  top: -200px;
+  right: 630px;
+  overflow: hidden;
+}
+
+.animateobs9 {
+  animation: updown9 2.5s ease-in;
+}
+
+@keyframes updown9 {
+  from {
+    position: absolute;
+    top: -200px;
+    right: 630px;
+  }
+
+  to {
+    position: absolute;
+    top: 550px;
+    right: 630px;
+  }
+}
