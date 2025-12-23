@@ -25,7 +25,7 @@ body {
   top: 0px;
   left: 340px;
 overflow: hidden;
-  /* transition: all 20s ease; */
+/* visibility:hidden; */
 }
 
 .animateobs1 {
