@@ -4,7 +4,7 @@ let margin = 70;
 let Lpos = 520;
 
 document.addEventListener("keydown", function move(e) {
-  console.log(e.keyCode);
+  // console.log(e.keyCode);
 
   if (e.keyCode == 37) {
     Lpos -= margin;
@@ -29,30 +29,30 @@ document.addEventListener("keydown", function move(e) {
 });
 
 let obs1 = document.getElementById("obs1");
-let playarea = 570;
-let Tpos = 10;
+// let playarea = 570;
+// let Tpos = 10;
 
-let obs1n = parseInt(obs1.style.top, 10);
-console.log(obs1n);
+// let obs1n = parseInt(obs1.style.top, 10);
+// console.log(obs1n);
 
-let obs1nc = window.getComputedStyle(obs1).top;
-console.log(obs1nc);
+// let obs1nc = window.getComputedStyle(obs1).top;
+// console.log(obs1nc);
 
 //animation for obs1
 
-function obsanimate(element) {
+let f1 = function obsanimate(element) {
   element.classList.remove("animateobs1");
 
   setTimeout(() => {
     element.classList.add("animateobs1");
   }, 10);
-}
+};
 
-obsanimate(obs1);
+f1(obs1);
 
-setInterval(() => {
-  obsanimate(obs1);
-}, 5000);
+let clear1 = setInterval(() => {
+  f1(obs1);
+}, 2500);
 
 //animation for obs2
 
@@ -63,12 +63,12 @@ function obsanimate2() {
 
   setTimeout(() => {
     obs2.classList.add("animateobs2");
-  }, 2000);
+  }, 3000);
 }
 
-obsanimate2();
+// obsanimate2();
 
-setInterval(obsanimate2, 5500);
+// setInterval(obsanimate2, 9000);
 
 //animation for obs3
 
@@ -79,14 +79,14 @@ function obsanimate3() {
 
   setTimeout(() => {
     obs3.classList.add("animateobs3");
-  }, 2500);
+  }, 2000);
 }
 
-obsanimate3();
+// obsanimate3();
 
-setInterval(obsanimate3, 6500);
+// setInterval(obsanimate3, 8000);
 
-//animation for obs4 
+//animation for obs4
 
 let obs4 = document.getElementById("obs4");
 
@@ -95,12 +95,12 @@ function obsanimate4() {
 
   setTimeout(() => {
     obs4.classList.add("animateobs4");
-  }, 4000);
+  }, 2000);
 }
 
-obsanimate4();
+// obsanimate4();
 
-setInterval(obsanimate4, 8500);
+// setInterval(obsanimate4, 7000);
 
 //animation for obs5
 
@@ -111,12 +111,12 @@ function obsanimate5() {
 
   setTimeout(() => {
     obs5.classList.add("animateobs5");
-  }, 5500);
+  }, 2500);
 }
 
-obsanimate5();
+// obsanimate5();
 
-setInterval(obsanimate5, 9500);
+// setInterval(obsanimate5, 8500);
 
 //animation for obs7
 
@@ -127,33 +127,46 @@ function obsanimate7() {
 
   setTimeout(() => {
     obs7.classList.add("animateobs7");
-  }, 6500);
+  }, 10000);
 }
 
-obsanimate7();
+// obsanimate7();
 
-setInterval(obsanimate7, 10500);
+// setInterval(obsanimate7, 13000);
 
 // animation for obs 9
 
 let obs9 = document.getElementById("obs9");
 
 function obsanimate9() {
-  obs7.classList.remove("animateobs9");
+  obs9.classList.remove("animateobs9");
 
   setTimeout(() => {
-    obs7.classList.add("animateobs9");
-  }, 3500);
+    obs9.classList.add("animateobs9");
+  }, 3000);
 }
 
-obsanimate9();
+// obsanimate9();
 
-setInterval(obsanimate9, 7500);
+// setInterval(obsanimate9, 8000);
 
+//CAR CRASH LOGIC
 
+setInterval(() => {
+  let cy = parseInt(car.getBoundingClientRect().top);
+  let o1y = Math.abs(parseInt(obs1.getBoundingClientRect().top));
 
+  let offsetY = Math.abs(o1y - cy);
 
+  console.log(cy);
+  console.log(o1y);
+  console.log(offsetY);
+  
+  if(offsetY<10) {
+  f1=null;
+  clearInterval(clear1);
+  obs1.style.top=cy + "px";
+  }
 
-
-
+}, 50);
 
