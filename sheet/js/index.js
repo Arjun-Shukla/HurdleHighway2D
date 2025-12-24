@@ -52,39 +52,39 @@ f1();
 
 let clear1 = setInterval(() => {
   f1();
-}, 2500);
+}, 3500);
 
 //animation for obs2
 
 let obs2 = document.getElementById("obs2");
 
-let f2 =function obsanimate2() {
+let f2 = function obsanimate2() {
   obs2.classList.remove("animateobs2");
 
   setTimeout(() => {
     obs2.classList.add("animateobs2");
   }, 3000);
-}
+};
 
-// f2();
+f2();
 
-// let clear2 = setInterval(f2, 9000);
+let clear2 = setInterval(f2, 9000);
 
 //animation for obs3
 
 let obs3 = document.getElementById("obs3");
 
-let f3 =function obsanimate3() {
+let f3 = function obsanimate3() {
   obs3.classList.remove("animateobs3");
 
   setTimeout(() => {
     obs3.classList.add("animateobs3");
   }, 2000);
-}
+};
 
-// f3();
+f3();
 
-// let clear3 = setInterval(f3, 8000);
+let clear3 = setInterval(f3, 8000);
 
 //animation for obs4
 
@@ -96,11 +96,11 @@ let f4 = function obsanimate4() {
   setTimeout(() => {
     obs4.classList.add("animateobs4");
   }, 2000);
-}
+};
 
-// f4();
+f4();
 
-//let clear4 = setInterval(f4, 7000);
+let clear4 = setInterval(f4, 7000);
 
 //animation for obs5
 
@@ -112,11 +112,11 @@ let f5 = function obsanimate5() {
   setTimeout(() => {
     obs5.classList.add("animateobs5");
   }, 2500);
-}
+};
 
-// f5();
+f5();
 
-// let clear5 = setInterval(f5, 8500);
+let clear5 = setInterval(f5, 8500);
 
 //animation for obs7
 
@@ -128,11 +128,11 @@ let f7 = function obsanimate7() {
   setTimeout(() => {
     obs7.classList.add("animateobs7");
   }, 10000);
-}
+};
 
-// f7();
+f7();
 
-// let clear7 = setInterval(f7, 13000);
+let clear7 = setInterval(f7, 13000);
 
 // animation for obs 9
 
@@ -144,31 +144,81 @@ let f9 = function obsanimate9() {
   setTimeout(() => {
     obs9.classList.add("animateobs9");
   }, 3000);
-}
+};
 
-// f9();
+f9();
 
-// let clear9 = setInterval(f9, 8000);
+let clear9 = setInterval(f9, 8000);
 
 //CAR CRASH LOGIC
+// crash function
 
 //obs1
-// setInterval(() => {
-//   let c1y = parseInt(car.getBoundingClientRect().top);
-//   let o1y = Math.abs(parseInt(obs1.getBoundingClientRect().top));
 
-//   let offsetY1 = Math.abs(o1y - c1y);
+function crash(car, obs, func, clearInt, xThreshold = 60, yThreshold = 10) {
+  let carY = parseInt(car.getBoundingClientRect().top);
+  let obsY = Math.abs(parseInt(obs.getBoundingClientRect().top));
+  let carX = parseInt(car.getBoundingClientRect().left);
+  let obsX = parseInt(obs.getBoundingClientRect().left);
+  let offsetY = Math.abs(obsY - carY);
+  let offsetX = Math.abs(obsX - carX);
+  if (offsetY < yThreshold && offsetX <= xThreshold) {
+    func = null;
+    clearInterval(clearInt);
+    obs.style.top = carY + "px";
+  }
+}
 
-//   // console.log(cy);
-//   // console.log(o1y);
-//   // console.log(offsetY1);
-  
-//   if(offsetY1<10) {
-//   f1=null;
-//   clearInterval(clear1);
-//   obs1.style.top=c1y + "px";
+//obs1
+
+setInterval(() => {
+  crash(car, obs1, f1, clear1);
+}, 50);
+
+// crash logic for obs2
+
+setInterval(() => {
+  crash(car, obs2, f2, clear2);
+}, 50);
+
+// crash logic for obs3
+
+setInterval(() => {
+  crash(car, obs3, f3, clear3);
+}, 50);
+
+// crash logic for obs4
+
+setInterval(() => {
+  crash(car, obs4, f4, clear4);
+}, 50);
+
+// crash logic for obs5
+
+setInterval(() => {
+  crash(car, obs5, f5, clear5);
+}, 50);
+
+//crash logic for obs7
+
+setInterval(() => {
+  crash(car, obs7, f7, clear7);
+}, 50);
+
+// car crasj logic for obs9
+
+setInterval(() => {
+  crash(car, obs9, f9, clear9);
+}, 50);
+
+//   console.log(o1x);
+//   console.log(offsetX1);
+
+//   if (offsetY1 < 10 && offsetX1 <= 55) {
+//     f1 = null;
+//     clearInterval(clear1);
+//     obs1.style.top = c1y + "px";
 //   }
-
 // }, 50);
 
 //obs 2
@@ -181,7 +231,7 @@ let f9 = function obsanimate9() {
 //   // console.log(cy);
 //   // console.log(o1y);
 //   // console.log(offsetY);
-  
+
 //   if(offsetY2<10) {
 //   f2=null;
 //   clearInterval(clear2);
@@ -200,7 +250,7 @@ let f9 = function obsanimate9() {
 //   // console.log(cy);
 //   // console.log(o1y);
 //   // console.log(offsetY);
-  
+
 //   if(offsetY3<10) {
 //   f3=null;
 //   clearInterval(clear3);
@@ -219,7 +269,7 @@ let f9 = function obsanimate9() {
 //   // console.log(cy);
 //   // console.log(o1y);
 //   // console.log(offsetY);
-  
+
 //   if(offsetY4<10) {
 //   f4=null;
 //   clearInterval(clear4);
@@ -238,7 +288,7 @@ let f9 = function obsanimate9() {
 //   // console.log(cy);
 //   // console.log(o1y);
 //   // console.log(offsetY);
-  
+
 //   if(offsetY5<10) {
 //   f5=null;
 //   clearInterval(clear5);
@@ -257,7 +307,7 @@ let f9 = function obsanimate9() {
 //   // console.log(cy);
 //   // console.log(o1y);
 //   // console.log(offsetY);
-  
+
 //   if(offsetY7<10) {
 //   f7=null;
 //   clearInterval(clear7);
@@ -276,7 +326,7 @@ let f9 = function obsanimate9() {
 //   // console.log(cy);
 //   // console.log(o1y);
 //   // console.log(offsetY);
-  
+
 //   if(offsetY9<10) {
 //   f9=null;
 //   clearInterval(clear9);
@@ -284,4 +334,3 @@ let f9 = function obsanimate9() {
 //   }
 
 // }, 50);
-

@@ -22,8 +22,8 @@ body {
 
 #obs1 {
   position: absolute;
-  top: 0px;
-  left: 340px;
+  top: -200px;
+  left: 315px;
 overflow: hidden;
 /* visibility:hidden; */
 }
@@ -36,7 +36,7 @@ overflow: hidden;
   from {
     position: absolute;
     top: -200px;
-    left: 340px;
+    left: 315px;
   }
 
   /* 50% {
@@ -48,7 +48,7 @@ overflow: hidden;
   to {
     position: absolute;
     top: 550px;
-    left: 340px;
+    left: 315px;
   }
 }
 
