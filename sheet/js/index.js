@@ -216,7 +216,29 @@ function crash(car, obs, func, clearInt, xThreshold = 60, yThreshold = 10) {
   if (offsetY < yThreshold && offsetX <= xThreshold) {
     document.removeEventListener("keydown", move);
     func = null;
+    f1 = null;
+    f2 = null;
+    f3 = null;
+    f4 = null;
+    f5 = null;
+    f7 = null;
+    f9 = null;
+    clearInterval(clear1);
+    clearInterval(clear2);
+    clearInterval(clear3);
+    clearInterval(clear4);
+    clearInterval(clear5);
+    clearInterval(clear7);
+    clearInterval(clear9);
     clearInterval(clearInt);
+    // Clear crash-checking intervals
+    clearInterval(crashInterval1);
+    clearInterval(crashInterval2);
+    clearInterval(crashInterval3);
+    clearInterval(crashInterval4);
+    clearInterval(crashInterval5);
+    clearInterval(crashInterval7);
+    clearInterval(crashInterval9);
     obs.style.top = carY + "px";
     gameover.style.visibility = "visible";
     scoref = null;
@@ -230,44 +252,31 @@ function crash(car, obs, func, clearInt, xThreshold = 60, yThreshold = 10) {
   }
 }
 
-//obs1
-
-setInterval(() => {
+// Crash-checking intervals for each obstacle
+let crashInterval1 = setInterval(() => {
   crash(car, obs1, f1, clear1);
 }, 50);
 
-// // crash logic for obs2
-
-setInterval(() => {
+let crashInterval2 = setInterval(() => {
   crash(car, obs2, f2, clear2);
 }, 50);
 
-// // crash logic for obs3
-
-setInterval(() => {
+let crashInterval3 = setInterval(() => {
   crash(car, obs3, f3, clear3);
 }, 50);
 
-// // crash logic for obs4
-
-setInterval(() => {
+let crashInterval4 = setInterval(() => {
   crash(car, obs4, f4, clear4);
 }, 50);
 
-// // crash logic for obs5
-
-setInterval(() => {
+let crashInterval5 = setInterval(() => {
   crash(car, obs5, f5, clear5);
 }, 50);
 
-// //crash logic for obs7
-
-setInterval(() => {
+let crashInterval7 = setInterval(() => {
   crash(car, obs7, f7, clear7);
 }, 50);
 
-// // car crash logic for obs9
-
-setInterval(() => {
+let crashInterval9 = setInterval(() => {
   crash(car, obs9, f9, clear9);
 }, 50);
