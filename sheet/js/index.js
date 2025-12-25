@@ -1,3 +1,15 @@
+let playbutton = document.getElementById("playbtn");
+let gameStarted = false;
+let mainMenu = document.getElementById("mainMenu");
+
+playbutton.addEventListener("click" , function maingame(){
+  gameStarted=true;
+  mainMenu.style.visibility='hidden';
+  newgame();
+})
+
+let newgame = function startgame(){
+
 let car = document.getElementById("car");
 // car.focus();
 let margin = 70;
@@ -280,3 +292,15 @@ let crashInterval7 = setInterval(() => {
 let crashInterval9 = setInterval(() => {
   crash(car, obs9, f9, clear9);
 }, 50);
+
+}
+
+let mainMenubtn = document.getElementById("mainMenubtn");
+mainMenubtn.addEventListener("click" , function regame(){
+
+  // newgame=null;
+  location.reload();
+  gameover.style.visibility="hidden";
+  mainMenu.style.visibility="visible";
+})
+// newgame();

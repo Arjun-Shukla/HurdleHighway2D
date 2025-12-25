@@ -296,6 +296,63 @@ body {
   }
 }
 
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 30px;
+  position: relative;
+  bottom: 40px;
+  height: 200px;
+  width: 300px;
+  font-size: 54px;
+  font-family: "BBH Bogle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #081c24;
+}
+
+#maintitle1 {
+  color: #ff7a00;
+}
+
+#maintitle2 {
+  color: #00f6ff;
+}
+
+#maintitle3 {
+  color: #c6ff00;
+}
+
+#credits {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid black;
+  border-radius: 30px; */
+  position: relative;
+  top:30px;
+  height: 150px;
+  width: 300px;
+  font-size: 54px;
+  font-family: "BBH Bogle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  /* background-color: #081c24; */
+}
+
+#name1{
+color:#A4B5C6;
+}
+
+#name2{
+
+color:#A855FF;
+}
+
 .scoreboard {
   display: flex;
   flex-direction: column;
@@ -348,7 +405,7 @@ body {
   background-image: url("../media/gameover.png");
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: 100% 80%;
+  background-size: 100% 65%;
   background-color: #203a43;
   /* background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); */
   z-index: 10;
@@ -358,11 +415,65 @@ body {
 
 #scorepara {
   position: relative;
-  top: 130px;
-  right: 10px;
+  top: 110px;
+  right: 0px;
   color: #ffffff;
   font-size: 28px;
   font-family: "BBH Bogle", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+#mainMenu {
+  visibility: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 15px;
+  height: 500px;
+  width: 400px;
+  position: absolute;
+  top: 35px;
+  left: 420px;
+  background-color: #203a43;
+  border: 3px solid #00ffff;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+  z-index: 11;
+}
+#playbtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 150px;
+  background-color: #ffffff;
+  border: 2px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "BBH Bogle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+}
+
+#mainMenubtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 150px;
+  background-color: #ffffff;
+  border: 2px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "BBH Bogle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  position: relative;
+  top: 120px;
 }
