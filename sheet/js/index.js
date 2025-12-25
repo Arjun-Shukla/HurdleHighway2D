@@ -151,6 +151,16 @@ let f5 = function obsanimate5() {
   }, 2500);
 };
 
+//animation for obs6
+
+let obs6 = document.getElementById("obs6");
+let f6 = function obsanimate6(){
+  obs6.classList.remove("animateobs6");
+  setTimeout(()=>{
+    obs6.classList.add("animateobs6")
+  },50)
+};
+
 //animation for obs7
 
 let obs7 = document.getElementById("obs7");
@@ -162,6 +172,17 @@ let f7 = function obsanimate7() {
     obs7.classList.add("animateobs7");
   }, 10000);
 };
+
+//animation for obs8
+
+let obs8 = document.getElementById("obs8");
+let f8 = function obsanimate8(){
+  obs8.classList.remove("animateobs8");
+  setTimeout(()=>{
+    obs8.classList.add("animateobs8")
+  },50)
+};
+
 // animation for obs 9
 
 let obs9 = document.getElementById("obs9");
@@ -202,10 +223,20 @@ f5();
 
 let clear5 = setInterval(f5, 8500);
 
+//obs6
+
+f6();
+let clear6 = setInterval(f6,2500);
+
 // //obs7
 f7();
 
 let clear7 = setInterval(f7, 13000);
+
+//obs8
+
+f8();
+let clear8 = setInterval(f8,2500);
 
 // //obs9
 
@@ -233,14 +264,18 @@ function crash(car, obs, func, clearInt, xThreshold = 60, yThreshold = 10) {
     f3 = null;
     f4 = null;
     f5 = null;
+    f6=null;
     f7 = null;
+    f8=null;
     f9 = null;
     clearInterval(clear1);
     clearInterval(clear2);
     clearInterval(clear3);
     clearInterval(clear4);
     clearInterval(clear5);
+    clearInterval(clear6);
     clearInterval(clear7);
+    clearInterval(clear8);
     clearInterval(clear9);
     clearInterval(clearInt);
     // Clear crash-checking intervals
@@ -295,8 +330,10 @@ let crashInterval9 = setInterval(() => {
 
 }
 
+//logic for Main Menu btn
+
 let mainMenubtn = document.getElementById("mainMenubtn");
-mainMenubtn.addEventListener("click" , function regame(){
+mainMenubtn.addEventListener("click" , function remenu(){
 
   // newgame=null;
   location.reload();
@@ -304,3 +341,11 @@ mainMenubtn.addEventListener("click" , function regame(){
   mainMenu.style.visibility="visible";
 })
 // newgame();
+
+// logic for Play Again
+let playagain = document.getElementById("playagain");
+playagain.addEventListener("click", function regame() {
+  gameover.style.visibility = "hidden";
+  mainMenu.style.visibility = "hidden";
+  location.reload();
+});

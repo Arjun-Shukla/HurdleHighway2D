@@ -29,7 +29,7 @@ body {
 }
 
 .animateobs1 {
-  animation: updown 2.5s ease-in;
+  animation: updown 2.0s linear;
 }
 
 @keyframes updown {
@@ -61,7 +61,7 @@ body {
 }
 
 .animateobs2 {
-  animation: updown2 2.5s ease-in;
+  animation: updown2 2.0s linear;
 }
 
 @keyframes updown2 {
@@ -86,7 +86,7 @@ body {
 }
 
 .animateobs3 {
-  animation: updown3 2.5s ease-in;
+  animation: updown3 2.0s linear;
 }
 
 @keyframes updown3 {
@@ -112,7 +112,7 @@ body {
 }
 
 .animateobs4 {
-  animation: updown4 2.5s ease-in;
+  animation: updown4 2.0s linear;
 }
 
 @keyframes updown4 {
@@ -144,7 +144,7 @@ body {
 }
 
 .animateobs5 {
-  animation: updown4 2.5s ease-in;
+  animation: updown4 2.0s linear;
 }
 
 @keyframes updown5 {
@@ -176,7 +176,7 @@ body {
 }
 
 .animateobs7 {
-  animation: updown4 2.5s ease-in;
+  animation: updown4 2.0s linear;
 }
 
 @keyframes updown7 {
@@ -203,11 +203,14 @@ body {
 
 #obs6 {
   position: absolute;
-  top: 0px;
+  top: -200px;
   right: 901px;
-  /* animation: updown6 2.5s ease-in infinite; */
-  transition: all 2.5s ease;
+  transition: all 2.0 ease;
   overflow: hidden;
+}
+
+.animateobs6{
+animation: updown6 2.0s linear;
 }
 
 /* .animateobs6 {
@@ -238,11 +241,14 @@ body {
 
 #obs8 {
   position: absolute;
-  top: 0px;
+  top: -200px;
   right: 290px;
-  /* animation: updown8 2.5s ease-in infinite; */
-  transition: all 2.5s ease;
+  transition: all 2.0s ease;
   overflow: hidden;
+}
+
+.animateobs8{
+animation: updown8 2.0s linear;
 }
 
 /* .animateobs6 {
@@ -279,7 +285,7 @@ body {
 }
 
 .animateobs9 {
-  animation: updown9 2.5s ease-in;
+  animation: updown9 2.0s linear;
 }
 
 @keyframes updown9 {
@@ -397,15 +403,15 @@ color:#A855FF;
   align-items: center;
   border: 2px solid black;
   border-radius: 15px;
-  height: 340px;
-  width: 470px;
+  height: 500px;
+  width: 400px;
   position: absolute;
-  top: 130px;
-  left: 380px;
+  top: 35px;
+  left: 420px;
   background-image: url("../media/gameover.png");
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: 100% 65%;
+  background-size: 100% 55%;
   background-color: #203a43;
   /* background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); */
   z-index: 10;
@@ -417,7 +423,7 @@ color:#A855FF;
   position: relative;
   top: 110px;
   right: 0px;
-  color: #ffffff;
+  color: #ff7a00;
   font-size: 28px;
   font-family: "BBH Bogle", sans-serif;
   font-weight: 400;
@@ -475,5 +481,25 @@ color:#A855FF;
   font-style: normal;
   font-size: 22px;
   position: relative;
-  top: 120px;
+  top: 150px;
+}
+
+#playagain{
+
+    display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 150px;
+  background-color: #ffffff;
+  border: 2px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "BBH Bogle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+position:relative;
+top: 130px;
 }
