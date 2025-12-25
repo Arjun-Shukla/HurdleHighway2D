@@ -9,7 +9,7 @@ body {
   background-repeat: no-repeat;
   background-size: 50%;
   background-position: 300px 15px;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 #car {
@@ -24,8 +24,8 @@ body {
   position: absolute;
   top: -200px;
   left: 315px;
-overflow: hidden;
-/* visibility:hidden; */
+  overflow: hidden;
+  /* visibility:hidden; */
 }
 
 .animateobs1 {
@@ -107,7 +107,7 @@ overflow: hidden;
   position: absolute;
   top: -200px;
   right: 520px;
-overflow: hidden;
+  overflow: hidden;
   /* transition: all 20s ease; */
 }
 
@@ -139,7 +139,7 @@ overflow: hidden;
   position: absolute;
   top: -200px;
   left: 400px;
-overflow: hidden;
+  overflow: hidden;
   /* transition: all 20s ease; */
 }
 
@@ -171,7 +171,7 @@ overflow: hidden;
   position: absolute;
   top: -200px;
   right: 700px;
-overflow: hidden;
+  overflow: hidden;
   /* transition: all 20s ease; */
 }
 
@@ -205,7 +205,7 @@ overflow: hidden;
   position: absolute;
   top: 0px;
   right: 901px;
-  animation: updown6 2.5s ease-in infinite;
+  /* animation: updown6 2.5s ease-in infinite; */
   transition: all 2.5s ease;
   overflow: hidden;
 }
@@ -216,9 +216,9 @@ overflow: hidden;
 
 @keyframes updown6 {
   from {
-  position: absolute;
-  top: -200px;
-  right: 901px;
+    position: absolute;
+    top: -200px;
+    right: 901px;
   }
 
   /* 50% {
@@ -228,9 +228,9 @@ overflow: hidden;
   } */
 
   to {
-  position: absolute;
-  top: 550px;
-  right: 901px;
+    position: absolute;
+    top: 550px;
+    right: 901px;
   }
 }
 
@@ -240,7 +240,7 @@ overflow: hidden;
   position: absolute;
   top: 0px;
   right: 290px;
-  animation: updown8 2.5s ease-in infinite;
+  /* animation: updown8 2.5s ease-in infinite; */
   transition: all 2.5s ease;
   overflow: hidden;
 }
@@ -251,9 +251,9 @@ overflow: hidden;
 
 @keyframes updown8 {
   from {
-  position: absolute;
-  top: -200px;
-  right: 290px;
+    position: absolute;
+    top: -200px;
+    right: 290px;
   }
 
   /* 50% {
@@ -263,9 +263,9 @@ overflow: hidden;
   } */
 
   to {
-  position: absolute;
-  top: 550px;
-  right: 290px;
+    position: absolute;
+    top: 550px;
+    right: 290px;
   }
 }
 
@@ -294,4 +294,75 @@ overflow: hidden;
     top: 550px;
     right: 630px;
   }
+}
+
+.scoreboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 8px;
+  height: 100px;
+  width: 200px;
+  gap: 20px;
+  background-color: #111827;
+  /* background-color: #111827; */
+  border-radius: 8px;
+  border: 2px solid #00ffff;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+  font-weight: 600;
+}
+
+#scorepara1 {
+  font-family: "BBH Bogle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  /* color: #e5e7eb; */
+  font-size: 20px;
+}
+
+#scorepara2 {
+  font-family: "BBH Bogle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  /* color: #e5e7eb; */
+  font-size: 20px;
+}
+
+#gameover {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 15px;
+  height: 340px;
+  width: 470px;
+  position: absolute;
+  top: 130px;
+  left: 380px;
+  background-image: url("../media/gameover.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% 80%;
+  background-color: #203a43;
+  /* background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); */
+  z-index: 10;
+  border: 3px solid #00ffff;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+}
+
+#scorepara {
+  position: relative;
+  top: 130px;
+  right: 10px;
+  color: #ffffff;
+  font-size: 28px;
+  font-family: "BBH Bogle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }

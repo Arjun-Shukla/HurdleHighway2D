@@ -3,9 +3,8 @@ let car = document.getElementById("car");
 let margin = 70;
 let Lpos = 520;
 
-document.addEventListener("keydown", function move(e) {
+function move(e) {
   // console.log(e.keyCode);
-
   if (e.keyCode == 37) {
     Lpos -= margin;
   } else if (e.keyCode == 39) {
@@ -17,16 +16,60 @@ document.addEventListener("keydown", function move(e) {
   if (Lpos < 260) {
     Lpos = 260;
   }
-
   if (Lpos > 788) {
     Lpos = 788;
   }
   // car.style.position = 'absolute';
   car.style.left = Lpos + "px";
   car.style.bottom = "0px";
-
   // setInterval(move,100);
-});
+}
+document.addEventListener("keydown", move);
+
+//scoring logic
+
+let score = 0;
+let scoreb = document.getElementById("scorepara1");
+
+let scoref = () => {
+  score++;
+  console.log(score);
+  scoreb.innerHTML = "SCORE - " + score;
+};
+let clearScore = setInterval(scoref, 1000);
+
+//Variable speed logic
+
+let speedb = document.getElementById("scorepara2");
+let scoreg = document.getElementById("scorepara");
+let gameover = document.getElementById("gameover");
+
+let speed1 = () => {
+  speedb.innerHTML = "SPEED - 160 KM/H";
+};
+let clearspeed1 = setInterval(speed1, 1900);
+
+let speed2 = () => {
+  speedb.innerHTML = "SPEED - 120 KM/H";
+};
+let clearspeed2 = setInterval(speed2, 5000);
+
+let speed3 = () => {
+  speedb.innerHTML = "SPEED - 140 KM/H";
+};
+let clearspeed3 = setInterval(speed3, 3200);
+
+let speed4 = () => {
+  speedb.innerHTML = "SPEED - 150 KM/H";
+};
+let clearspeed4 = setInterval(speed4, 1500);
+
+let speed5 = () => {
+  speedb.innerHTML = "SPEED - 110 KM/H";
+};
+let clearspeed5 = setInterval(speed5, 5500);
+
+//animations start here
 
 let obs1 = document.getElementById("obs1");
 // let playarea = 570;
@@ -48,12 +91,6 @@ let f1 = function obsanimate1() {
   }, 10);
 };
 
-f1();
-
-let clear1 = setInterval(() => {
-  f1();
-}, 3500);
-
 //animation for obs2
 
 let obs2 = document.getElementById("obs2");
@@ -65,10 +102,6 @@ let f2 = function obsanimate2() {
     obs2.classList.add("animateobs2");
   }, 3000);
 };
-
-f2();
-
-let clear2 = setInterval(f2, 9000);
 
 //animation for obs3
 
@@ -82,10 +115,6 @@ let f3 = function obsanimate3() {
   }, 2000);
 };
 
-f3();
-
-let clear3 = setInterval(f3, 8000);
-
 //animation for obs4
 
 let obs4 = document.getElementById("obs4");
@@ -97,10 +126,6 @@ let f4 = function obsanimate4() {
     obs4.classList.add("animateobs4");
   }, 2000);
 };
-
-f4();
-
-let clear4 = setInterval(f4, 7000);
 
 //animation for obs5
 
@@ -114,10 +139,6 @@ let f5 = function obsanimate5() {
   }, 2500);
 };
 
-f5();
-
-let clear5 = setInterval(f5, 8500);
-
 //animation for obs7
 
 let obs7 = document.getElementById("obs7");
@@ -129,11 +150,6 @@ let f7 = function obsanimate7() {
     obs7.classList.add("animateobs7");
   }, 10000);
 };
-
-f7();
-
-let clear7 = setInterval(f7, 13000);
-
 // animation for obs 9
 
 let obs9 = document.getElementById("obs9");
@@ -145,6 +161,41 @@ let f9 = function obsanimate9() {
     obs9.classList.add("animateobs9");
   }, 3000);
 };
+
+// animations
+obs1;
+f1();
+
+let clear1 = setInterval(() => {
+  f1();
+}, 3500);
+
+// //obs2
+f2();
+
+let clear2 = setInterval(f2, 9000);
+
+// //obs3
+f3();
+
+let clear3 = setInterval(f3, 8000);
+
+// //obs4
+f4();
+
+let clear4 = setInterval(f4, 7000);
+
+// //obs5
+f5();
+
+let clear5 = setInterval(f5, 8500);
+
+// //obs7
+f7();
+
+let clear7 = setInterval(f7, 13000);
+
+// //obs9
 
 f9();
 
@@ -163,9 +214,19 @@ function crash(car, obs, func, clearInt, xThreshold = 60, yThreshold = 10) {
   let offsetY = Math.abs(obsY - carY);
   let offsetX = Math.abs(obsX - carX);
   if (offsetY < yThreshold && offsetX <= xThreshold) {
+    document.removeEventListener("keydown", move);
     func = null;
     clearInterval(clearInt);
     obs.style.top = carY + "px";
+    gameover.style.visibility = "visible";
+    scoref = null;
+    clearInterval(clearScore);
+    scoreg.innerHTML = "YOUR SCORE - " + score;
+    clearInterval(clearspeed1);
+    clearInterval(clearspeed2);
+    clearInterval(clearspeed3);
+    clearInterval(clearspeed4);
+    clearInterval(clearspeed5);
   }
 }
 
@@ -175,162 +236,38 @@ setInterval(() => {
   crash(car, obs1, f1, clear1);
 }, 50);
 
-// crash logic for obs2
+// // crash logic for obs2
 
 setInterval(() => {
   crash(car, obs2, f2, clear2);
 }, 50);
 
-// crash logic for obs3
+// // crash logic for obs3
 
 setInterval(() => {
   crash(car, obs3, f3, clear3);
 }, 50);
 
-// crash logic for obs4
+// // crash logic for obs4
 
 setInterval(() => {
   crash(car, obs4, f4, clear4);
 }, 50);
 
-// crash logic for obs5
+// // crash logic for obs5
 
 setInterval(() => {
   crash(car, obs5, f5, clear5);
 }, 50);
 
-//crash logic for obs7
+// //crash logic for obs7
 
 setInterval(() => {
   crash(car, obs7, f7, clear7);
 }, 50);
 
-// car crasj logic for obs9
+// // car crash logic for obs9
 
 setInterval(() => {
   crash(car, obs9, f9, clear9);
 }, 50);
-
-//   console.log(o1x);
-//   console.log(offsetX1);
-
-//   if (offsetY1 < 10 && offsetX1 <= 55) {
-//     f1 = null;
-//     clearInterval(clear1);
-//     obs1.style.top = c1y + "px";
-//   }
-// }, 50);
-
-//obs 2
-// setInterval(() => {
-//   let c2y = parseInt(car.getBoundingClientRect().top);
-//   let o2y = Math.abs(parseInt(obs2.getBoundingClientRect().top));
-
-//   let offsetY2 = Math.abs(o2y - c2y);
-
-//   // console.log(cy);
-//   // console.log(o1y);
-//   // console.log(offsetY);
-
-//   if(offsetY2<10) {
-//   f2=null;
-//   clearInterval(clear2);
-//   obs2.style.top=c2y + "px";
-//   }
-
-// }, 50);
-
-//obs3
-// setInterval(() => {
-//   let c3y = parseInt(car.getBoundingClientRect().top);
-//   let o3y = Math.abs(parseInt(obs3.getBoundingClientRect().top));
-
-//   let offsetY3 = Math.abs(o3y - c3y);
-
-//   // console.log(cy);
-//   // console.log(o1y);
-//   // console.log(offsetY);
-
-//   if(offsetY3<10) {
-//   f3=null;
-//   clearInterval(clear3);
-//   obs3.style.top=c3y + "px";
-//   }
-
-// }, 50);
-
-// //obs4
-// setInterval(() => {
-//   let c4y = parseInt(car.getBoundingClientRect().top);
-//   let o4y = Math.abs(parseInt(obs4.getBoundingClientRect().top));
-
-//   let offsetY4 = Math.abs(o4y - c4y);
-
-//   // console.log(cy);
-//   // console.log(o1y);
-//   // console.log(offsetY);
-
-//   if(offsetY4<10) {
-//   f4=null;
-//   clearInterval(clear4);
-//   obs4.style.top=c4y + "px";
-//   }
-
-// }, 50);
-
-// //obs5
-// setInterval(() => {
-//   let c5y = parseInt(car.getBoundingClientRect().top);
-//   let o5y = Math.abs(parseInt(obs5.getBoundingClientRect().top));
-
-//   let offsetY5 = Math.abs(o5y - c5y);
-
-//   // console.log(cy);
-//   // console.log(o1y);
-//   // console.log(offsetY);
-
-//   if(offsetY5<10) {
-//   f5=null;
-//   clearInterval(clear5);
-//   obs5.style.top=c5y + "px";
-//   }
-
-// }, 50);
-
-// //obs7
-// setInterval(() => {
-//   let c7y = parseInt(car.getBoundingClientRect().top);
-//   let o7y = Math.abs(parseInt(obs7.getBoundingClientRect().top));
-
-//   let offsetY7 = Math.abs(o7y - c7y);
-
-//   // console.log(cy);
-//   // console.log(o1y);
-//   // console.log(offsetY);
-
-//   if(offsetY7<10) {
-//   f7=null;
-//   clearInterval(clear7);
-//   obs7.style.top=c7y + "px";
-//   }
-
-// }, 50);
-
-// //obs9
-// setInterval(() => {
-//   let c9y = parseInt(car.getBoundingClientRect().top);
-//   let o9y = Math.abs(parseInt(obs9.getBoundingClientRect().top));
-
-//   let offsetY9 = Math.abs(o9y - c9y);
-
-//   // console.log(cy);
-//   // console.log(o1y);
-//   // console.log(offsetY);
-
-//   if(offsetY9<10) {
-//   f9=null;
-//   clearInterval(clear9);
-//   obs9.style.top=c9y + "px";
-//   }
-
-// }, 50);
