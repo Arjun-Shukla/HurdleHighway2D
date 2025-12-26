@@ -503,3 +503,26 @@ color: #ff7a00;
 position:relative;
 top: 130px;
 }
+
+#gametimercont{
+  visibility: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  border: 2px solid black;
+  border-radius:1000px;
+  position: absolute;
+  top: 120px;
+  left:570px;
+  z-index:20;
+  background-color: red;
+}
+
+#gametimer{
+  font-size: 40px;
+  color: #FFFFFF;
+  text-shadow: 0 0 6px rgba(0,0,0,0.4);
+}
