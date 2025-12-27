@@ -16,8 +16,6 @@ body {
   position: absolute;
   bottom: 0px;
   left: 520px;
-  /* animation: leftturn 1s ease 1;
-  transition: all 1s ease; */
 }
 
 #obs1 {
@@ -25,11 +23,10 @@ body {
   top: -200px;
   left: 315px;
   overflow: hidden;
-  /* visibility:hidden; */
 }
 
 .animateobs1 {
-  animation: updown 2.0s linear;
+  animation: updown 2s linear;
 }
 
 @keyframes updown {
@@ -38,12 +35,6 @@ body {
     top: -200px;
     left: 315px;
   }
-
-  /* 50% {
-    position: absolute;
-    top: 500px;
-    left: 330px;
-  } */
 
   to {
     position: absolute;
@@ -61,7 +52,7 @@ body {
 }
 
 .animateobs2 {
-  animation: updown2 2.0s linear;
+  animation: updown2 2s linear;
 }
 
 @keyframes updown2 {
@@ -86,7 +77,7 @@ body {
 }
 
 .animateobs3 {
-  animation: updown3 2.0s linear;
+  animation: updown3 2s linear;
 }
 
 @keyframes updown3 {
@@ -108,11 +99,10 @@ body {
   top: -200px;
   right: 520px;
   overflow: hidden;
-  /* transition: all 20s ease; */
 }
 
 .animateobs4 {
-  animation: updown4 2.0s linear;
+  animation: updown4 2s linear;
 }
 
 @keyframes updown4 {
@@ -121,12 +111,6 @@ body {
     top: -200px;
     right: 520px;
   }
-
-  /* 50% {
-    position: absolute;
-    top: 500px;
-    left: 330px;
-  } */
 
   to {
     position: absolute;
@@ -140,11 +124,10 @@ body {
   top: -200px;
   left: 400px;
   overflow: hidden;
-  /* transition: all 20s ease; */
 }
 
 .animateobs5 {
-  animation: updown4 2.0s linear;
+  animation: updown4 2s linear;
 }
 
 @keyframes updown5 {
@@ -153,12 +136,6 @@ body {
     top: -200px;
     left: 400px;
   }
-
-  /* 50% {
-    position: absolute;
-    top: 500px;
-    left: 330px;
-  } */
 
   to {
     position: absolute;
@@ -172,11 +149,10 @@ body {
   top: -200px;
   right: 700px;
   overflow: hidden;
-  /* transition: all 20s ease; */
 }
 
 .animateobs7 {
-  animation: updown4 2.0s linear;
+  animation: updown4 2s linear;
 }
 
 @keyframes updown7 {
@@ -186,12 +162,6 @@ body {
     right: 700px;
   }
 
-  /* 50% {
-    position: absolute;
-    top: 500px;
-    left: 330px;
-  } */
-
   to {
     position: absolute;
     top: 550px;
@@ -199,23 +169,17 @@ body {
   }
 }
 
-/*infinite animation for traffic lights*/
-
 #obs6 {
   position: absolute;
   top: -200px;
   right: 901px;
-  transition: all 2.0 ease;
+  transition: all 2 ease;
   overflow: hidden;
 }
 
-.animateobs6{
-animation: updown6 2.0s linear;
+.animateobs6 {
+  animation: updown6 2s linear;
 }
-
-/* .animateobs6 {
-  animation: updown6 2.5s ease-in;
-} */
 
 @keyframes updown6 {
   from {
@@ -224,12 +188,6 @@ animation: updown6 2.0s linear;
     right: 901px;
   }
 
-  /* 50% {
-    position: absolute;
-    top: 500px;
-    left: 330px;
-  } */
-
   to {
     position: absolute;
     top: 550px;
@@ -237,23 +195,17 @@ animation: updown6 2.0s linear;
   }
 }
 
-/* traffic lights 2 */
-
 #obs8 {
   position: absolute;
   top: -200px;
   right: 290px;
-  transition: all 2.0s ease;
+  transition: all 2s ease;
   overflow: hidden;
 }
 
-.animateobs8{
-animation: updown8 2.0s linear;
+.animateobs8 {
+  animation: updown8 2s linear;
 }
-
-/* .animateobs6 {
-  animation: updown6 2.5s ease-in;
-} */
 
 @keyframes updown8 {
   from {
@@ -262,20 +214,12 @@ animation: updown8 2.0s linear;
     right: 290px;
   }
 
-  /* 50% {
-    position: absolute;
-    top: 500px;
-    left: 330px;
-  } */
-
   to {
     position: absolute;
     top: 550px;
     right: 290px;
   }
 }
-
-/* crash car */
 
 #obs9 {
   position: absolute;
@@ -285,7 +229,7 @@ animation: updown8 2.0s linear;
 }
 
 .animateobs9 {
-  animation: updown9 2.0s linear;
+  animation: updown9 2s linear;
 }
 
 @keyframes updown9 {
@@ -337,26 +281,22 @@ animation: updown8 2.0s linear;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* border: 2px solid black;
-  border-radius: 30px; */
   position: relative;
-  top:30px;
+  top: 30px;
   height: 150px;
   width: 300px;
   font-size: 54px;
   font-family: "BBH Bogle", sans-serif;
   font-weight: 400;
   font-style: normal;
-  /* background-color: #081c24; */
 }
 
-#name1{
-color:#A4B5C6;
+#name1 {
+  color: #a4b5c6;
 }
 
-#name2{
-
-color: #ff7a00;
+#name2 {
+  color: #ff7a00;
 }
 
 .scoreboard {
@@ -370,7 +310,6 @@ color: #ff7a00;
   width: 200px;
   gap: 20px;
   background-color: #111827;
-  /* background-color: #111827; */
   border-radius: 8px;
   border: 2px solid #00ffff;
   box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
@@ -382,7 +321,6 @@ color: #ff7a00;
   font-weight: 400;
   font-style: normal;
   color: white;
-  /* color: #e5e7eb; */
   font-size: 20px;
 }
 
@@ -391,7 +329,6 @@ color: #ff7a00;
   font-weight: 400;
   font-style: normal;
   color: white;
-  /* color: #e5e7eb; */
   font-size: 20px;
 }
 
@@ -413,7 +350,6 @@ color: #ff7a00;
   background-position: center top;
   background-size: 100% 55%;
   background-color: #203a43;
-  /* background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); */
   z-index: 10;
   border: 3px solid #00ffff;
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
@@ -484,9 +420,8 @@ color: #ff7a00;
   top: 150px;
 }
 
-#playagain{
-
-    display: flex;
+#playagain {
+  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -500,11 +435,11 @@ color: #ff7a00;
   font-weight: 400;
   font-style: normal;
   font-size: 22px;
-position:relative;
-top: 130px;
+  position: relative;
+  top: 130px;
 }
 
-#gametimercont{
+#gametimercont {
   visibility: hidden;
   display: flex;
   flex-direction: row;
@@ -513,16 +448,16 @@ top: 130px;
   height: 100px;
   width: 100px;
   border: 2px solid black;
-  border-radius:1000px;
+  border-radius: 1000px;
   position: absolute;
   top: 120px;
-  left:570px;
-  z-index:20;
+  left: 570px;
+  z-index: 20;
   background-color: red;
 }
 
-#gametimer{
+#gametimer {
   font-size: 40px;
-  color: #FFFFFF;
-  text-shadow: 0 0 6px rgba(0,0,0,0.4);
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
 }

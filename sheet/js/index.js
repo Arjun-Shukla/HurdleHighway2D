@@ -9,9 +9,11 @@ let timeraud = document.getElementById("timeraud");
 let carmoveaud = document.getElementById("carmoveaud");
 let hornaud = document.getElementById("hornaud");
 let crashaud = document.getElementById("crashaud");
+
 document.addEventListener("DOMContentLoaded", function introsound() {
   intro2.play();
 });
+
 playbutton.addEventListener("click", function maingame() {
   gameStarted = true;
   mainMenu.style.visibility = "hidden";
@@ -43,6 +45,7 @@ let timerf = function timer() {
     }
   }, 1000);
 };
+
 let newgame = function startgame() {
   document.addEventListener("keydown", function horn(e) {
     if (e.keyCode == 72) {
@@ -51,7 +54,6 @@ let newgame = function startgame() {
   });
   carmoveaud.play();
   let car = document.getElementById("car");
-  // car.focus();
   let margin = 70;
   let Lpos = 520;
 
@@ -62,9 +64,6 @@ let newgame = function startgame() {
     } else if (e.keyCode == 39) {
       Lpos += margin;
     }
-    // else if(pos<0 || pos>1040){
-    //     break;
-    // }
     if (Lpos < 260) {
       Lpos = 260;
     }
@@ -124,15 +123,7 @@ let newgame = function startgame() {
   //animations start here
 
   let obs1 = document.getElementById("obs1");
-  // let playarea = 570;
-  // let Tpos = 10;
-
-  // let obs1n = parseInt(obs1.style.top, 10);
-  // console.log(obs1n);
-
-  // let obs1nc = window.getComputedStyle(obs1).top;
-  // console.log(obs1nc);
-
+  
   //animation for obs1
 
   let f1 = function obsanimate1() {
