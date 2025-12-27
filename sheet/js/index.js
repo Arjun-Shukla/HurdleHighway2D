@@ -1,3 +1,4 @@
+let intro2 = document.getElementById("intro2");
 let playbutton = document.getElementById("playbtn");
 let gameStarted = false;
 let mainMenu = document.getElementById("mainMenu");
@@ -8,12 +9,15 @@ let timeraud = document.getElementById("timeraud");
 let carmoveaud = document.getElementById("carmoveaud");
 let hornaud = document.getElementById("hornaud");
 let crashaud = document.getElementById("crashaud");
-
+document.addEventListener("DOMContentLoaded", function introsound() {
+  intro2.play();
+});
 playbutton.addEventListener("click", function maingame() {
   gameStarted = true;
   mainMenu.style.visibility = "hidden";
   timerf();
   setTimeout(newgame, 3000);
+  intro2.pause();
 });
 
 let timerf = function timer() {
@@ -136,7 +140,7 @@ let newgame = function startgame() {
 
     setTimeout(() => {
       obs1.classList.add("animateobs1");
-    }, 10);
+    }, 1500);
   };
 
   //animation for obs2
@@ -148,7 +152,7 @@ let newgame = function startgame() {
 
     setTimeout(() => {
       obs2.classList.add("animateobs2");
-    }, 3000);
+    }, 3500);
   };
 
   //animation for obs3
@@ -160,7 +164,7 @@ let newgame = function startgame() {
 
     setTimeout(() => {
       obs3.classList.add("animateobs3");
-    }, 2000);
+    }, 5500);
   };
 
   //animation for obs4
@@ -172,7 +176,7 @@ let newgame = function startgame() {
 
     setTimeout(() => {
       obs4.classList.add("animateobs4");
-    }, 2000);
+    }, 2500);
   };
 
   //animation for obs5
@@ -184,7 +188,7 @@ let newgame = function startgame() {
 
     setTimeout(() => {
       obs5.classList.add("animateobs5");
-    }, 2500);
+    }, 3000);
   };
 
   //animation for obs6
@@ -194,7 +198,7 @@ let newgame = function startgame() {
     obs6.classList.remove("animateobs6");
     setTimeout(() => {
       obs6.classList.add("animateobs6");
-    }, 50);
+    }, 1500);
   };
 
   //animation for obs7
@@ -206,7 +210,7 @@ let newgame = function startgame() {
 
     setTimeout(() => {
       obs7.classList.add("animateobs7");
-    }, 10000);
+    }, 5000);
   };
 
   //animation for obs8
@@ -216,7 +220,7 @@ let newgame = function startgame() {
     obs8.classList.remove("animateobs8");
     setTimeout(() => {
       obs8.classList.add("animateobs8");
-    }, 50);
+    }, 1500);
   };
 
   // animation for obs 9
@@ -228,7 +232,7 @@ let newgame = function startgame() {
 
     setTimeout(() => {
       obs9.classList.add("animateobs9");
-    }, 3000);
+    }, 5500);
   };
 
   // animations
@@ -237,48 +241,48 @@ let newgame = function startgame() {
 
   let clear1 = setInterval(() => {
     f1();
-  }, 3500);
+  }, 5000);
 
   // //obs2
   f2();
 
-  let clear2 = setInterval(f2, 9000);
+  let clear2 = setInterval(f2, 7000);
 
   // //obs3
   f3();
 
-  let clear3 = setInterval(f3, 8000);
+  let clear3 = setInterval(f3, 9000);
 
   // //obs4
   f4();
 
-  let clear4 = setInterval(f4, 7000);
+  let clear4 = setInterval(f4, 6000);
 
   // //obs5
   f5();
 
-  let clear5 = setInterval(f5, 8500);
+  let clear5 = setInterval(f5, 7000);
 
   //obs6
 
   f6();
-  let clear6 = setInterval(f6, 2500);
+  let clear6 = setInterval(f6, 3500);
 
   // //obs7
   f7();
 
-  let clear7 = setInterval(f7, 13000);
+  let clear7 = setInterval(f7, 9000);
 
   //obs8
 
   f8();
-  let clear8 = setInterval(f8, 2500);
+  let clear8 = setInterval(f8, 3500);
 
   // //obs9
 
   f9();
 
-  let clear9 = setInterval(f9, 8000);
+  let clear9 = setInterval(f9, 9500);
 
   //CAR CRASH LOGIC
   // crash function
@@ -375,6 +379,7 @@ mainMenubtn.addEventListener("click", function remenu() {
   location.reload();
   gameover.style.visibility = "hidden";
   mainMenu.style.visibility = "visible";
+  intro2.play();
 });
 // newgame();
 
@@ -384,4 +389,5 @@ playagain.addEventListener("click", function regame() {
   gameover.style.visibility = "hidden";
   mainMenu.style.visibility = "hidden";
   location.reload();
+  intro2.play();
 });
