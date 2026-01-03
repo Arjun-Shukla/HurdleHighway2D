@@ -439,6 +439,12 @@ body {
   top: 130px;
 }
 
+#gametimer {
+  font-size: 40px;
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+}
+
 #gametimercont {
   visibility: hidden;
   display: flex;
@@ -456,8 +462,3 @@ body {
   background-color: red;
 }
 
-#gametimer {
-  font-size: 40px;
-  color: #ffffff;
-  text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
-}
