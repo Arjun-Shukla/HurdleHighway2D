@@ -2,7 +2,7 @@
 
 ### Endless Car Racing Web Game
 
-Harder Highway 2D is a fast-paced **endless car racing game** built using core web technologies. The objective is simple: **avoid incoming obstacles, survive as long as possible, and achieve the highest score**.
+Harder Highway 2D is a fast-paced **endless car racing game** built using core web technologies. The objective is simple: **avoid incoming obstacles, survive as long as possible, and achieve the highest scores**.
 
 This project demonstrates strong fundamentals of **JavaScript DOM manipulation, event handling, and game logic implementation** without using any external game engine.
 
