@@ -48,10 +48,9 @@ This project demonstrates strong fundamentals of **JavaScript DOM manipulation, 
 
 ## 📂 Project Structure
 
-```id="3l6p1g"
-Hurdle-Highway-2D/sheets
+Hurdle-Highway-2D/
 │── index.html
-│── style.css
+│── index.css
 │── index.js
 │── media
 ```
