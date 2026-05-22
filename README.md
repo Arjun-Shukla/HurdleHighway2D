@@ -10,6 +10,7 @@ This project demonstrates strong fundamentals of **JavaScript DOM manipulation, 
 
 ## 🎮 Gameplay
 
+
 * Control your car and **dodge obstacles** coming from the front
 * Survive longer to **increase your score**
 * Game speed gradually increases, making it more challenging over time
