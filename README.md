@@ -55,7 +55,6 @@ Hurdle-Highway-2D/
 │── index.js
 │── media
 ```
-
 ---
 
 ## ⚙️ How to Run :
@@ -87,7 +86,7 @@ Hurdle-Highway-2D/
 * 🏆 High score saving system
 * 🎨 Enhanced graphics and UI
 
----
+------
 
 ## 👨‍💻 Author
 
