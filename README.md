@@ -93,7 +93,7 @@ Hurdle-Highway-2D/
 **Arjun Shukla**
 GitHub: https://github.com/Arjun-Shukla
 
----
+---------
 
 ## ⭐ Support
 
