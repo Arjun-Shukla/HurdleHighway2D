@@ -86,7 +86,7 @@ Hurdle-Highway-2D/
 * 🏆 High score saving system
 * 🎨 Enhanced graphics and UI
 
-------
+---------
 
 ## 👨‍💻 Author
 
